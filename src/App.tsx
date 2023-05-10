@@ -11,11 +11,10 @@ function App() {
   return (
     <div>
       <Header />
-
-      <div className={styles.container}>
+      <main className={styles.container}>
         <NewTask />
         <Tasks />
-      </div>
+      </main>
     </div>
 
   )

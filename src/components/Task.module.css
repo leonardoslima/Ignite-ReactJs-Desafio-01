@@ -1,15 +1,31 @@
 .task {
   display: flex;
   justify-content: space-between;
-  gap: 0.75rem;
+  align-items: flex-start;
+  gap: .75rem;
   padding: 1rem;
   background: var(--gray-400);
-  border-radius: 5px;
+  border-radius: 8px;
   margin-bottom: 1rem;
 
   height: 4.5rem;
 
   font-size: 0.875rem;
+}
+
+.task p{
+  width: 100%;
+}
+
+.text_unchecked {
+  font-size: .875rem;
+  color: var(--gray-100);
+}
+
+.text_checked {
+  font-size: .875rem;
+  color: var(--gray-300);
+  text-decoration: line-through;
 }
 
 .radio_checked {

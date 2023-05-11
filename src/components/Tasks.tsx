@@ -6,14 +6,15 @@ import { Clipboard } from "@phosphor-icons/react";
 
 interface Task {
   id: string;
-  texto: string;
+  content: string;
 }
 
 interface TasksProps {
   tasks: Task[],
+  deleteTask: (id: string) => void;
 }
 
-export function Tasks({ tasks }: TasksProps) {
+export function Tasks({ tasks, deleteTask }: TasksProps) {
   const createdTask = tasks.length
 
   return (
@@ -32,7 +33,7 @@ export function Tasks({ tasks }: TasksProps) {
       {createdTask ?
         tasks.map((task) => {
           return (
-            <Task text={task.texto} />
+            <Task key={task.id} task={task} deleteTask={deleteTask} />
           )
         })
         :
